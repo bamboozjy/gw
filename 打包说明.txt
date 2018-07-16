@@ -1,0 +1,11 @@
+1.注释index.html中的script标签；
+2.将web pack.config.js中的
+output: {
+    path: path.resolve(__dirname, './dist'),
+    publicPath: '/dist/',
+    filename: 'build.js'
+  },
+中的publicPath: '/dist/‘改为publicPath: ‘./‘
+3.将src文件夹移动到dist下，除图片文件夹外都可以删除
+
+注意：开启mode: 'history’,似乎会失败，打包后没内容。
